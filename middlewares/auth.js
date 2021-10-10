@@ -19,17 +19,16 @@ module.exports = {
     } else {
       res.json({
         success: 0,
-        message: 'Access denied, unauthorized user'
+        message: '此使用者尚未被授權查看資料' // Access denied, unauthorized user'
       })
     }
   },
   createToken: (data) => {
     // data.password = undefined;
     // sign({results: data})
-    const jsontoken = sign({ email: data.email }, process.env.JWT_SECRET, {
+    const jsonToken = sign({ userId: data.id, createdAt: data.createdAt }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRES_IN
     });
-    return jsontoken
+    return jsonToken
   }
 }
-
