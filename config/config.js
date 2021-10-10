@@ -19,7 +19,7 @@ const config = {
     "username": process.env.AWS_DB_USERNAME,
     "password": process.env.AWS_DB_PASSWORD,
     "database": process.env.AWS_DB_DATABASE,
-    "host":  process.env.AWS_DB_HOST,
+    "host": process.env.AWS_DB_HOST,
     "dialect": "mysql"
   }
 }

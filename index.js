@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require('body-parser')
 const userRoutes = require('./routes/user.route');
+const faqRoutes = require('./routes/faq.route');
+const faqCategoryRoutes = require('./routes/faq-category.route');
+
 const app = express();
 
 var corsOptions = {
@@ -16,6 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/users', userRoutes);
+app.use('/api/admin/faq', faqRoutes);
+app.use('/api/admin/faq-category', faqCategoryRoutes);
 
 // simple route
 app.get("/", (req, res) => {
@@ -31,3 +36,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
