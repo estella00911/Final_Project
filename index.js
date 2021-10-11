@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require('body-parser')
 const userRoutes = require('./routes/user.route');
 const faqRoutes = require('./routes/faq.route');
+const userController = require("./controllers/user.controller");
 
 const app = express();
 
@@ -27,6 +28,9 @@ app.get("/", (req, res) => {
     message: "This is RESTful API working."
   });
 });
+
+app.post("api/register", userController.createUser);
+app.post("api/login", userController.login);
 
 
 // set port, listen for requests
