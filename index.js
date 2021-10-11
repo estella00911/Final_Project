@@ -29,8 +29,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("api/register", userController.createUser);
-app.post("api/login", userController.login);
+// app.post("api/register", userController.createUser);
+// app.post("api/login", userController.login);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 3000;
