@@ -191,10 +191,10 @@ const userController = {
     // 思考中
   },
   getUserMe: async (req, res) => {
-    const { id } = req.body
+    const { id } = req.body;
     try {
-      const data = await User.findByPk(id);
-      if (!data) {
+      const result = await User.findByPk(id);
+      if (!result) {
         return res.status(404).json({
           success: 0,
           message: '找不到此 id 的 user'
@@ -203,7 +203,12 @@ const userController = {
       return res.status(200).json({
         success: 1,
         message: '成功獲得使用者的自身資訊',
-        data
+        result: {
+          id: result.id,
+          email: result.email,
+          phone: result.phone,
+          isAdmin: result.isAdmin
+        }
       })
     } catch (err) {
       res.status(500).json({
