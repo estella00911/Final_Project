@@ -2,7 +2,7 @@ FORMAT: 1A
 HOST: http://localhost:5002/api
 
 # test
-`const BASE_URL = https://estella00911.tw/ || http://localhost:5002`
+`const BASE_URL = https://estella00911.tw/api || http://localhost:5002`
 
 路徑有
 1. 使用者：`${BASE_URL}/api/users/`
@@ -236,7 +236,7 @@ HOST: http://localhost:5002/api
                     "updatedAt": "2021-10-10T06:28:37.000Z"
                 }
             ]
-        }
+            }
 
 
 + Response 500 (application/json)
