@@ -1,5 +1,24 @@
 # Final_Project
 ## [API document](https://estella00911.github.io/Final_Project/)
+#### Users
+| HTTP method | CRUD   | URLs              | actions                   |
+| ----------- | ------ | ----------------- | ------------------------- | 
+| `POST`      | Create | `/api/admin/faq`      | To create new FAQ   |
+| `GET`       | Read   | `/api/admin/faq`      | To get all FAQs         |
+| `GET`       | Read   | `/api/admin/faq/{id}` | To get particular FAQ    |
+| `PUT`       | Update | `/api/admin/faq/{id}` | To update particular FAQ |
+| `DELETE`    | Delete | `/api/admin/faq/{id}` | To delete particular FAQ | 
+| `POST`    | READ | `/api/users/login` | To login |
+
+#### FAQs
+| HTTP method | CRUD   | URLs              | actions                   |
+| ----------- | ------ | ----------------- | ------------------------- | 
+| `POST`      | Create | `/api/users/register`      | To create/register user   |
+| `GET`       | Read   | `/api/users`      | To get all users          |
+| `GET`       | Read   | `/api/users/{id}` | To get particular user    |
+| `PUT`       | Update | `/api/users/{id}` | To update particular user |
+| `DELETE`    | Delete | `/api/users/{id}` | To delete particular user | 
+| `POST`    | READ | `/api/users/login` | To login |
 
 ### 將 apib 輸出成 HTML
 1. 下載 API Blueprint on apiary 網站，然後檔名為 `xxxx.apib`
